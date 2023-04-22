@@ -4,23 +4,23 @@ const nodemailer = require('nodemailer');
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 587,
-        secure: false, // true for 465, false for other ports
+        secure: false, 
         auth: {
-          user: 'nikhilgkp97@gmail.com', // replace with your email
-          pass: 'bamtvesuwcqinxrh' // replace with your password
+          user: 'nikhilgkp97@gmail.com', 
+          pass: 'bamtvesuwcqinxrh' 
         }
       });
       
-      // setup email data with unicode symbols
+      
       let mailOptions = {
-        from: email, // sender address
-        to: "nikhilgkp97@gmail.com", // list of receivers
-        subject: subject, // Subject line
-        text: content, // plain text body
-        html: content // html body
+        from: email, 
+        to: "nikhilgkp97@gmail.com", 
+        subject: subject, 
+        text: content, 
+        html: content 
       };
       
-      // send mail with defined transport object
+      
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
           return console.log(error);
